@@ -2,231 +2,485 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
+    <title>Document</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #333537;
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+        * {
             margin: 0;
             padding: 0;
-        }
-        
-        .container {
-            margin: 50px auto;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            max-width: 800px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-        
-        ul {
+            box-sizing: border-box;
             list-style: none;
-            padding: 0;
+            font-family: "Montserrat", sans-serif;
         }
         
-        li {
+        body {
+            background: #585c68;
+            font-size: 14px;
+            line-height: 22px;
+            color: #555555;
+        }
+        
+        .bold {
+            font-weight: 700;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        
+        .semi-bold {
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .resume {
+            width: 800px;
+            height: auto;
+            display: flex;
+            margin: 50px auto;
+        }
+        
+        .resume .resume_left {
+            width: 280px;
+            background: #0bb5f4;
+        }
+        
+        .resume .resume_left .resume_profile {
+            width: 100%;
+            height: 280px;
+        }
+        
+        .resume .resume_left .resume_profile img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .resume .resume_left .resume_content {
+            padding: 0 25px;
+        }
+        
+        .resume .title {
+            margin-bottom: 20px;
+        }
+        
+        .resume .resume_left .bold {
+            color: #fff;
+        }
+        
+        .resume .resume_left .regular {
+            color: #b1eaff;
+        }
+        
+        .resume .resume_item {
+            padding: 25px 0;
+            border-bottom: 2px solid #b1eaff;
+        }
+        
+        .resume .resume_left .resume_item:last-child,
+        .resume .resume_right .resume_item:last-child {
+            border-bottom: 0px;
+        }
+        
+        .resume .resume_left ul li {
+            display: flex;
             margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .resume .resume_left ul li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .resume .resume_left ul li .icon {
+            width: 35px;
+            height: 35px;
+            background: #fff;
+            color: #0bb5f4;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 16px;
+            position: relative;
+        }
+        
+        .resume .icon i,
+        .resume .resume_right .resume_hobby ul li i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .resume .resume_left ul li .data {
+            color: #b1eaff;
+        }
+        
+        .resume .resume_left .resume_skills ul li {
+            display: flex;
+            margin-bottom: 10px;
+            color: #b1eaff;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .resume .resume_left .resume_skills ul li .skill_name {
+            width: 25%;
+        }
+        
+        .resume .resume_left .resume_skills ul li .skill_progress {
+            width: 60%;
+            margin: 0 5px;
+            height: 5px;
+            background: #009fd9;
+            position: relative;
+        }
+        
+        .resume .resume_left .resume_skills ul li .skill_per {
+            width: 15%;
+        }
+        
+        .resume .resume_left .resume_skills ul li .skill_progress span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #fff;
+        }
+        
+        .resume .resume_left .resume_social .semi-bold {
+            color: #fff;
+            margin-bottom: 3px;
+        }
+        
+        .resume .resume_right {
+            width: 520px;
+            background: #fff;
+            padding: 25px;
+        }
+        
+        .resume .resume_right .bold {
+            color: #0bb5f4;
+        }
+        
+        .resume .resume_right .resume_work ul,
+        .resume .resume_right .resume_education ul {
+            padding-left: 40px;
+            overflow: hidden;
+        }
+        
+        .resume .resume_right ul li {
+            position: relative;
+        }
+        
+        .resume .resume_right ul li .date {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .resume .resume_right ul li .info {
+            margin-bottom: 20px;
+        }
+        
+        .resume .resume_right ul li:last-child .info {
+            margin-bottom: 0;
+        }
+        
+        .resume .resume_right .resume_work ul li:before,
+        .resume .resume_right .resume_education ul li:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -25px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            border: 2px solid #0bb5f4;
+        }
+        
+        .resume .resume_right .resume_work ul li:after,
+        .resume .resume_right .resume_education ul li:after {
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: -21px;
+            width: 2px;
+            height: 115px;
+            background: #0bb5f4;
+        }
+        
+        .resume .resume_right .resume_hobby ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .resume .resume_right .resume_hobby ul li {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #0bb5f4;
+            border-radius: 50%;
+            position: relative;
+            color: #0bb5f4;
+        }
+        
+        .resume .resume_right .resume_hobby ul li i {
+            font-size: 30px;
+        }
+        
+        .resume .resume_right .resume_hobby ul li:before {
+            content: "";
+            position: absolute;
+            top: 40px;
+            right: -52px;
+            width: 50px;
+            height: 2px;
+            background: #0bb5f4;
+        }
+        
+        .resume .resume_right .resume_hobby ul li:last-child:before {
+            display: none;
         }
         
         a {
             text-decoration: none;
-            color: #333;
-        }
-        
-        .hover:hover {
-            color: #fff;
-            background-color: #333;
-        }
-        
-        hr.vertical {
-            border: none;
-            border-left: 2px solid rgb(195, 191, 191);
-            height: 1150px;
-            position: absolute;
-            left: 50%;
-            margin-left: -3px;
-            top: 140px;
-        }
-        
-        button {
-            color: #fff;
-            font-size: 20px;
-            background-color: #b1afaf;
-            border: 0;
-        }
-        
-        .container {
-            display: flex;
-        }
-        
-        .right {
-            flex: 1;
-        }
-        
-        .projects {
-            position: relative;
-            left: 10px;
-            top: 50px;
-        }
-        
-        @media only screen and (max-width: 600px) {
-            .container {
-                flex-direction: column;
-            }
-            .right {
-                margin-top: 20px;
-            }
-            hr.vertical {
-                height: auto;
-                width: 2px;
-                margin: 1000px auto;
-                left: 0;
-                right: 0;
-                position: static;
-            }
-            .heading {
-                margin-left: -150px;
-                max-width: min-content;
-            }
-        }
-        
-        .heading {
-            position: relative;
-            left: 200px;
-            top: -30px;
         }
     </style>
 </head>
 
 <body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
-
-
-
-    <div class="container">
-
-
-
-
-
-
-        <div class="right">
-            <div class="heading">
-                <h1>Venkatesh Eedupuganti</h1>
+    <div class="resume">
+        <div class="resume_left">
+            <div class="resume_profile">
+                <img src="https://www.linkedin.com/dms/D5606AQEcIWdu5rHmdw/messaging-attachmentFile/0/1679317132385?m=AQKYDANmwrRPkQAAAYcNxnxcgn2doClpEzC6bI3YvIwClQFzPHjXhqA2Dw&ne=1&v=beta&t=0mVh5NMDacbF4aIpnN4wM9mXRUyrIO38PkTbIax8FnE" alt="profile_pic">
             </div>
-
-
-
-
-            <h2>Web Developer</h2>
-            <ul>
-                <li>Email:evenkateshvenky2717@gmail.com</li>
-                <li>Phone: +91 8688661039</li>
-                <li><i class="fa-brands fa-linkedin"></i> <a class="hover" href="https://www.linkedin.com/in/venkatesh-eedupuganti-43a35218a/">LinkedIn</a></li>
-                <li><i class="fa-brands fa-github"></i> <a class="hover" href="https://github.com/">GitHub</a></li>
-                <button> <a href="https://eedupugantivenkatesh.github.io/simple-website-with-resume/">Personal Website</a></button>
-            </ul>
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React.Js</li>
-                <li>Bootstrap</li>
-                <li>Tailwind Css</li>
-                <li>Material-UI</li>
-            </ul>
-            <h2>Experience</h2>
-            <ul>
-                <li>
-                    <h3>Web Developer</h3>
-                    <p>Lamp Institute,Hyderabad</p>
-                    <p>June 2022 - December 2022</p>
-                    <p>Responsibilities:</p>
+            <div class="resume_content">
+                <div class="resume_item resume_info">
+                    <div class="title">
+                        <p class="bold">Venkatesh</p>
+                        <p class="regular">Web developer</p>
+                    </div>
                     <ul>
-                        <li>Develop and maintain company website</li>
-                        <li>Design and implement user interfaces</li>
-                        <li>Collaborate with team members on various projects</li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-map-signs"></i>
+                            </div>
+                            <div class="data">
+                                Andhra pradesh, INDIA
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="data">
+                                +91 8688661039
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="data">
+                                ev0159609@gmail.com
+
+                            </div>
+                        </li>
+
+
                     </ul>
-                </li>
-                <li>
-                    <h3>Front-End Developer Intern</h3>
-                    <p>10000coders,Hyderabad</p>
-                    <p>January 2023-Present</p>
-                    <p>Responsibilities:</p>
+                </div>
+                <div class="resume_item resume_skills">
+                    <div class="title">
+                        <p class="bold">skills</p>
+                    </div>
                     <ul>
-                        <li>Developed and maintained client websites</li>
-                        <li>Created responsive designs for mobile and desktop</li>
-                        <li>Collaborated with design team on user interface</li>
+                        <li>
+                            <div class="skill_name">
+                                HTML
+                            </div>
+                            <div class="skill_progress">
+                                <span style="width: 80%;"></span>
+                            </div>
+                            <div class="skill_per">80%</div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                CSS
+                            </div>
+                            <div class="skill_progress">
+                                <span style="width: 70%;"></span>
+                            </div>
+                            <div class="skill_per">70%</div>
+                        </li>
+
+                        <li>
+                            <div class="skill_name">
+                                JS
+                            </div>
+                            <div class="skill_progress">
+                                <span style="width: 60%;"></span>
+                            </div>
+                            <div class="skill_per">60%</div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                React
+                            </div>
+                            <div class="skill_progress">
+                                <span style="width: 88%;"></span>
+                            </div>
+                            <div class="skill_per">88%</div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                Tailwind
+                            </div>
+                            <div class="skill_progress">
+                                <span style="width: 88%;"></span>
+                            </div>
+                            <div class="skill_per">90%</div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                Ant
+                            </div>
+                            <div class="skill_progress">
+                                <span style="width: 60%;"></span>
+                            </div>
+                            <div class="skill_per">60%</div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                Problem solving
+                            </div>
+                            <div class="skill_progress">
+                                <span style="width: 60%;"></span>
+                            </div>
+                            <div class="skill_per">60%</div>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <h3>Computer science degree </h3>
-                    <p>Aims college,Andhra Pradesh</p>
-                    <p>June 2019- June 2023</p>
-                </li>
-            </ul>
+
+                </div>
+                <div class="resume_item resume_social">
+                    <div class="title">
+                        <p class="bold">Social</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="data">
+
+                                <a href="https://github.com/EedupugantiVenkatesh">
+                                    <p class="semi-bold">GitHub</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="data">
+
+                                <a href="https://www.linkedin.com/in/venkatesh-eedupuganti-43a35218a/">
+                                    <p class="semi-bold">Linkedin</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="right projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <h3>Resume<a class="hover" href="https://eedupugantivenkatesh.github.io/resumegit/"> &nbsp;Link</a></h3>
+        <div class="resume_right">
+            <div class="resume_item resume_about">
+                <div class="title">
+                    <p class="bold">About Me</p>
+                </div>
+                <p>With a proven track record of designing and implementing intuitive, user-friendly web interfaces, I am a frontend developer with a passion for creating engaging digital experiences. Leveraging my expertise in HTML, CSS, and JavaScript,
+                    I am confident in my ability to tackle any challenge and deliver exceptional results.</p>
+            </div>
+            <div class="resume_item resume_work">
+                <div class="title">
+                    <p class="bold">projects</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">Flipkart pages </div>
+                        <div class="info">
+                            <p class="semi-bold">clone website</p>
+                            <p>Flipkart webpage using HTML and CSS,web page that shows content and having responsive nature.chech here
+                                <a href=" https://eedupugantivenkatesh.github.io/flipkartclone/"><b> Link</b></a> </p>
 
-                    <p>HTML and CSS Resume Project: Designed and coded a responsive and modern-looking personal resume website using HTML and CSS. Utilized HTML5 semantic tags to structure the content and CSS3 to style the website. Implemented responsive
-                        design techniques, including media queries and flexbox, to ensure the website is optimized for various screen sizes. Incorporated JavaScript to add interactivity to the website, such as smooth scrolling and navigation. This project
-                        allowed me to demonstrate my proficiency in HTML and CSS, as well as my ability to design and develop a website from scratch. You can view the project live at <a class="hover" href="https://eedupugantivenkatesh.github.io/resumegit/">Link</a>.</p>
-                    <p>Technologies used: HTML, CSS</p>
-                </li>
-                <li>
-                    <h3>Flipkart<a class="hover" href="  https://eedupugantivenkatesh.github.io/flipkartclone/"> &nbsp;Link</a></h3>
+                        </div>
+                    </li>
 
-                    <p>A Flipkart layout using HTML, CSS, and Bootstrap could involve building a responsive web application to showcase the festival of colors Write HTML code: Use HTML to create the structure of the web page, including headers, paragraphs,
-                        images, and links. HTML tags are used to define the content of the page and its layout. Add CSS styling: Use CSS to define the visual style and layout of the web page, including font size and type, colors, margins, padding, and
-                        positioning of elements on the page. CSS is used to create a consistent design across multiple pages of the website. Incorporate Bootstrap: Use Bootstrap to add responsive design elements to the website. Bootstrap is a popular
-                        front-end framework that provides pre-designed UI components, such as navigation bars, buttons, forms, and grids, that can be easily customized and used to create a responsive and attractive layout for the website.</p>
-                    <p>Technologies used:Html, Bootstrap, CSS</p>
-                </li>
-                <li>
-                    <h3>10000coders clone <a class="hover" href="  https://eedupugantivenkatesh.github.io/10kcoders-git/"> &nbsp;Link</a></h3>
+                    <li>
+                        <div class="date">Holi Website</div>
+                        <div class="info">
+                            <p class="semi-bold">festival special </p>
+                            <p>A Holi project using HTML, CSS, and Bootstrap could involve building a responsive web appliaction.check here
+                                <a href="https://gleeful-youtiao-0a8a83.netlify.app/"> <b> Link</b></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">Clone Website </div>
+                        <div class="info">
+                            <p class="semi-bold">10000coders clone</p>
+                            <p>A project using HTML and CSS,webpage that shows content and styling without extra Technologies.chech here
+                                <a href=" https://eedupugantivenkatesh.github.io/10kcoders-git/"><b> Link</b></a> </p>
 
-                    <p>
-                        10000codersclone10000codersclone Show project A basic static project using HTML and CSS involves building a web page that presents content and styling without any dynamic functionality or server-side processing. This type of project is typically used
-                        for informational websites, online portfolios, or simple web applications.I did this on of my learning skills in a span of 2 days. happy to receive suggestions</p>
-                    <p>Technologies used:Html,CSS</p>
-                </li>
+                        </div>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
+            <div class="resume_item resume_education">
+                <div class="title">
+                    <p class="bold">Education</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">2019 - 2023</div>
+                        <div class="info">
+                            <p class="semi-bold">Computer Science and Engineering(Aims college)</p>
+                            <p>Computer science fundamentals and web Technologies which are in high demand in market.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2017- 2019</div>
+                        <div class="info">
+                            <p class="semi-bold">Intermediate(Govt.High School)</p>
+                            <p>Maths,Physics,Science. <br>these are my major subjects in Higher secondary school.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2016- 2017</div>
+                        <div class="info">
+                            <p class="semi-bold">Secondary School(Govt.High School)</p>
+                            <p>on this satge of education ,my teachers help me to increase the level of innovative thoughts.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resume_item resume_hobby">
+                <div class="title">
+                    <p class="bold">Hobby</p>
+                </div>
+                <ul>
+                    <li><i class="fas fa-book"></i></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li><i class="fas fa-music"></i></li>
+                    <li><i class="fas fa-blog"></i></li>
+                </ul>
+            </div>
         </div>
-        <hr class="vertical">
-
     </div>
-
-
-
-
-
 </body>
 
 </html>
