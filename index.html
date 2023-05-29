@@ -43,12 +43,12 @@
         
         .resume .resume_left {
             width: 280px;
-            background: #0bb5f4;
+            background: #001A5F;
         }
         
         .resume .resume_left .resume_profile {
             width: 100%;
-            height: 280px;
+            height: 200px;
         }
         
         .resume .resume_left .resume_profile img {
@@ -73,8 +73,8 @@
         }
         
         .resume .resume_item {
-            padding: 25px 0;
-            border-bottom: 2px solid #b1eaff;
+            padding: 20px;
+            border-bottom: 2px solid #1140c0;
         }
         
         .resume .resume_left .resume_item:last-child,
@@ -96,7 +96,7 @@
             width: 35px;
             height: 35px;
             background: #fff;
-            color: #0bb5f4;
+            color: #001A5F;
             border-radius: 50%;
             margin-right: 15px;
             font-size: 16px;
@@ -112,13 +112,13 @@
         }
         
         .resume .resume_left ul li .data {
-            color: #b1eaff;
+            color: white;
         }
         
         .resume .resume_left .resume_skills ul li {
             display: flex;
             margin-bottom: 10px;
-            color: #b1eaff;
+            color: white;
             justify-content: space-between;
             align-items: center;
         }
@@ -131,7 +131,7 @@
             width: 60%;
             margin: 0 5px;
             height: 5px;
-            background: #009fd9;
+            background: #001A5F;
             position: relative;
         }
         
@@ -159,7 +159,7 @@
         }
         
         .resume .resume_right .bold {
-            color: #0bb5f4;
+            color: #001A5F;
         }
         
         .resume .resume_right .resume_work ul,
@@ -195,18 +195,27 @@
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            border: 2px solid #0bb5f4;
+            border: 2px solid #001A5F;
         }
         
-        .resume .resume_right .resume_work ul li:after,
+        .resume .resume_right .resume_work ul li:after {
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: -21px;
+            width: 2px;
+            height: 268px;
+            background: #001A5F;
+        }
+        
         .resume .resume_right .resume_education ul li:after {
             content: "";
             position: absolute;
             top: 14px;
             left: -21px;
             width: 2px;
-            height: 115px;
-            background: #0bb5f4;
+            height: 158px;
+            background: #001A5F;
         }
         
         .resume .resume_right .resume_hobby ul {
@@ -217,10 +226,10 @@
         .resume .resume_right .resume_hobby ul li {
             width: 80px;
             height: 80px;
-            border: 2px solid #0bb5f4;
+            border: 2px solid #001A5F;
             border-radius: 50%;
             position: relative;
-            color: #0bb5f4;
+            color: #001A5F;
         }
         
         .resume .resume_right .resume_hobby ul li i {
@@ -234,7 +243,7 @@
             right: -52px;
             width: 50px;
             height: 2px;
-            background: #0bb5f4;
+            background: #001A5F;
         }
         
         .resume .resume_right .resume_hobby ul li:last-child:before {
@@ -253,14 +262,13 @@
     <div class="resume">
         <div class="resume_left">
             <div class="resume_profile">
-                <img src="https://user-images.githubusercontent.com/100284755/234878520-3cc6433d-04cf-43e9-ba4d-523af6ad0cf2.jpg" alt="profile_pic">
+                <img src="https://github.com/EedupugantiVenkatesh/resumegit/assets/100284755/fce79d58-b14d-4e15-9add-3008b6aa4e0b" alt="profile_pic" width="50%" height="20%">
             </div>
             <div class="resume_content">
                 <div class="resume_item resume_info">
                     <div class="title">
-                        <p class="bold">Venkatesh
-                            <br>Eedupuganti
-                        </p>
+                        <p class="bold">
+                            Venkatesh Eedupuganti</p>
                         <p class="regular">Web developer</p>
                     </div>
                     <ul>
@@ -303,66 +311,36 @@
                             <div class="skill_name">
                                 HTML
                             </div>
-                            <div class="skill_progress">
-                                <span style="width: 80%;"></span>
-                            </div>
-                            <div class="skill_per">80%</div>
+
                         </li>
                         <li>
                             <div class="skill_name">
                                 CSS
                             </div>
-                            <div class="skill_progress">
-                                <span style="width: 70%;"></span>
-                            </div>
-                            <div class="skill_per">70%</div>
+
                         </li>
 
                         <li>
                             <div class="skill_name">
                                 JS
                             </div>
-                            <div class="skill_progress">
-                                <span style="width: 60%;"></span>
-                            </div>
-                            <div class="skill_per">60%</div>
+
                         </li>
                         <li>
                             <div class="skill_name">
                                 React
                             </div>
-                            <div class="skill_progress">
-                                <span style="width: 88%;"></span>
-                            </div>
-                            <div class="skill_per">88%</div>
+
                         </li>
+
                         <li>
                             <div class="skill_name">
-                                Tailwind
+                                React Native
                             </div>
-                            <div class="skill_progress">
-                                <span style="width: 88%;"></span>
-                            </div>
-                            <div class="skill_per">90%</div>
+
+
                         </li>
-                        <li>
-                            <div class="skill_name">
-                                Ant
-                            </div>
-                            <div class="skill_progress">
-                                <span style="width: 60%;"></span>
-                            </div>
-                            <div class="skill_per">60%</div>
-                        </li>
-                        <li>
-                            <div class="skill_name">
-                                Problem solving
-                            </div>
-                            <div class="skill_progress">
-                                <span style="width: 60%;"></span>
-                            </div>
-                            <div class="skill_per">60%</div>
-                        </li>
+
                     </ul>
 
                 </div>
@@ -408,8 +386,54 @@
                         </li>
                     </ul>
                 </div>
+                <div class="resume_item resume_social">
+                    <div class="title">
+                        <p class="bold">achievements</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div>
+
+                            </div>
+                            <div class="data">
+
+
+                                <p class="semi-bold">1.Cultural program head </p>
+
+                            </div>
+                        </li>
+                        <li>
+                            <li>
+                                <div>
+
+                                </div>
+                                <div class="data">
+
+
+                                    <p class="semi-bold">2.Poster Presentation winner at collegiate level</p>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+
+                                </div>
+                                <div>
+
+
+                                    <p class="semi-bold">3.Chess championship winner at collegiate level</p>
+
+                                </div>
+                            </li>
+
+
+
+
+                    </ul>
+                </div>
             </div>
         </div>
+
         <div class="resume_right">
             <div class="resume_item resume_about">
                 <div class="title">
@@ -427,7 +451,10 @@
                         <div class="date">React TODO-APP </div>
                         <div class="info">
                             <p class="semi-bold">Todo website</p>
-                            <p>Todo webpage using React.js that shows content and having responsive nature.check here
+                            <p>A React todo app is a web application that lets users create and manage tasks. Users can input new tasks, view a list of tasks, mark tasks as complete, and delete tasks. The app provides a simple and intuitive interface for
+                                organizing and tracking tasks. Tasks can be easily edited, checked off, and removed from the list. Overall, the React todo app enhances productivity by helping users stay organized and focused.
+                                <br> check here
+
                                 <a href=" https://amazing-cranachan-304a4e.netlify.app"><b> Link</b></a> </p>
 
                         </div>
@@ -437,34 +464,14 @@
                         <div class="date">React weather-app</div>
                         <div class="info">
                             <p class="semi-bold">weather application</p>
-                            <p>A project using react.js and API integration that using frontend Technologies.check here
+                            <p>A React weather app utilizes React components to display real-time weather information. Users can input their location or use geolocation to fetch weather data. The app provides current weather conditions, including temperature,
+                                humidity, and wind speed. Weather forecasts for upcoming days are also displayed using React components. The app features a responsive design that adapts to different screen sizes and devices.
+                                <br> check here
                                 <a href=" https://beamish-buttercream-9b2e34.netlify.app"><b> Link</b></a> </p>
 
                         </div>
                     </li>
-                    <li>
-                        <div class="date">Random frontend Works</div>
 
-                        <div style="display:flex">
-                            <div class="info" style=" flex:1">
-
-                                clock
-                                <a href="https://funny-paprenjak-6abed5.netlify.app/"> <b> Link</b></a><br> survey form
-                                <a href="https://stirring-shortbread-7de134.netlify.app"> <b> Link</b></a><br> portfolio
-                                <a href="https://astounding-moonbeam-c0b9a9.netlify.app"> <b> Link</b></a><br>10000coders clone
-                                <a href="https://10000codersclonebyvenkatesh.netlify.app"> <b> Link</b></a><br>
-
-                            </div>
-                            <div style=" flex:1">
-                                simple react template
-                                <a href="https://venkatesh-miniproject.netlify.app"> <b> Link</b></a><br> holi website
-                                <a href="https://gleeful-youtiao-0a8a83.netlify.app"> <b> Link</b></a><br>dinosar game
-                                <a href="https://eedupugantivenkatesh.github.io/dinosargame/"> <b> Link</b></a><br>flipkart clone
-                                <a href="https://eedupugantivenkatesh.github.io/flipkartclone/"> <b> Link</b></a>
-
-                            </div>
-                        </div>
-                    </li>
 
                 </ul>
             </div>
@@ -478,6 +485,7 @@
                         <div class="info">
                             <p class="semi-bold">Computer Science and Engineering(AIMS college)</p>
                             <p>Computer science fundamentals and web Technologies which are in high demand in market.</p>
+                            <p style="font-weight:600;">CGPA: 7.0</p>
                         </div>
                     </li>
                     <li>
@@ -485,6 +493,8 @@
                         <div class="info">
                             <p class="semi-bold">Intermediate(Govt. High School)</p>
                             <p>Maths,Physics,Science. <br>these are my major subjects in Higher secondary school.</p>
+                            <p style="font-weight:600;">CGPA: 9.5</p>
+
                         </div>
                     </li>
                     <li>
@@ -492,6 +502,8 @@
                         <div class="info">
                             <p class="semi-bold">Secondary School(Govt. High School)</p>
                             <p>on this satge of education ,my teachers help me to increase the level of innovative thoughts.</p>
+                            <p style="font-weight:600;">CGPA: 9.3</p>
+
                         </div>
                     </li>
                 </ul>
